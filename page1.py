@@ -51,16 +51,16 @@ def get_session_id():
 
 
 def cache_data():
-    paths = loadJSON('paths.json')
+    key_title = loadJSON('key_title.json')
     recs = loadJSON('all_methods_recs.json')
-    return recs, paths
+    return recs, key_title
 
 
 @st.cache(allow_output_mutation=True, show_spinner=False)
 def loading_data():
     all_methods = ['ARD', 'lucene', 'doc2vec_standard',
                    'bert_sw_cls_sum', 'tfidf', 'fasttext', 'lda_100_sym']
-    method_recs, paths = cache_data()
+    method_recs, key_title = cache_data()
 
     #random_index = random.randint(0, len(method_recs['ARD']))
     choices = list(range(0, len(method_recs['ARD'])+1))
@@ -71,7 +71,7 @@ def loading_data():
 
     metadata = getMetaData()
 
-    query_title, _ = getTitle(paths[random_key])
+    query_title = key_title[random_key]
     query_description = metadata.loc[metadata.title == query_title, 'description'].tolist()[
         0]
 
