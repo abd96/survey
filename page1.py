@@ -1,8 +1,6 @@
 import streamlit as st
 from utils import *
 import random
-from pprint import pprint
-import gspread
 from streamlit.report_thread import get_report_ctx
 import firebase_admin
 from firebase_admin import credentials, firestore
