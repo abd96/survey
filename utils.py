@@ -1,18 +1,6 @@
-import re
 import json
 import yaml
 import pandas as pd
-from scipy import spatial
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem.snowball import GermanStemmer
-from dateutil.parser import parse
-from spacy.lang.de import German
-
-german_stopwords = stopwords.words('german')
-
-german_stopwords.append('...')
-gstemmer = GermanStemmer()
 
 
 def readConfig(configPath):
