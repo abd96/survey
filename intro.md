@@ -3,7 +3,7 @@ Evaluation von Empfehlungssystemen für Sendungen der ARD Mediathek
 Herzlich Willkommen zu meiner Umfrage und vielen Dank fürs Vorbeischauen. Im Rahmen meiner Bachelorarbeit 
 zum Thema **textbasierte Empfehlungssysteme** möchte ich 
 bestehende Methoden zur Feststellung von thematischen Übereinstimmungen auf Zuverlässigkeit überprüfen und die besten von allen herausfinden.
-Dies ist allerdings wegen mangelnden Daten ohne von Menschen validierte Relevanz-Indikatoren nicht realisierbar.
+Dies ist allerdings wegen mangelnden Daten ohne von Menschen validierten Relevanz-Indikatoren nicht realisierbar.
 
 Die Arbeit erfolgt unter Betreuung von 
 * [Prof. Dr. Erich Schubert](https://www-ai.cs.tu-dortmund.de/PERSONAL/schubert.html) und 
