@@ -194,8 +194,6 @@ def show():
     col4, col5, col6 = st.columns([3, 2, 3])
 
     if not st.session_state.end:
-        if col4.button('Neuladen', help='Bei nicht verfügbaren Beschreibung und nicht informativem Titel'):
-            reload()
 
         if col4.button('Auswahl bestätigen und neue Sendung anzeigen'):
             save_selections(query_key)
