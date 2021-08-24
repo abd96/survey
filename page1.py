@@ -61,7 +61,7 @@ def loading_data():
     method_recs, key_title = cache_data()
 
     #random_index = random.randint(0, len(method_recs['ARD']))
-    choices = list(range(0, len(method_recs['ARD'])+1))
+    choices = list(range(0, len(method_recs['ARD'])))
     random_index = random.choice(
         [x for x in choices if x not in st.session_state.ids])
     st.session_state.ids.append(random_index)
@@ -178,7 +178,7 @@ def show():
         if col4.button('Neuladen', help='Bei nicht verfügbaren Beschreibung und nicht informativem Titel'):
             reload()
 
-        if col4.button('Auswahl bestätigen und erneut durchführen'):
+        if col4.button('Auswahl bestätigen und neue Sendung anzeigen'):
             save_selections(query_key)
             reload()
 
