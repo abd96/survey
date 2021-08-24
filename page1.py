@@ -34,7 +34,7 @@ def connect_firebase():
             'databaseURL': st.secrets['databaseURL']
 
             }
-    cred = {
+    cred = credentials.Certificate({
             'type': st.secrets['type'],
             'project_id': st.secrets['project_id'],
             'private_key_id': st.secrets['private_key_id'],
@@ -45,7 +45,7 @@ def connect_firebase():
             'token_uri': st.secrets['token_uri'],
             'auth_provider_x509_cert_url': st.secrets['auth_provider_x509_cert_url'],
             'client_x509_cert_url': st.secrets['client_x509_cert_url']
-            }
+            })
 
     default_app = None
     if not firebase_admin._apps:
