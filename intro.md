@@ -13,7 +13,7 @@ am [Lehrstuhl VIII](https://www-ai.cs.tu-dortmund.de/index.html) der Informatik 
 
 Der Ablauf ist sehr einfach. Pro Versuch wird das Titel und die Beschreibung einer Sendung aus der ARD Mediathek angezeigt und darunter 
 wird eine Menge von Sendungen aufgelistet, die möglicherweise thematisch zu der angegebenen Sendung übereinstimmen. Mit einem Häkchen können Sendungen 
-ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlung dienen und zum Thema passen. Dabei muss der Auswahl nicht aus dem gleichen Programm der Sendung stammen 
+ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlung dienen und zum Thema passen. Dabei muss die Auswahl nicht aus dem gleichen Programm der Sendung stammen 
 (z.B. bei Tagesschau, nur Tagesschau Sendungen zu wählen), sondern wir interessieren uns für inhaltlich passende Übereinstimmungen aus anderen Programmen.
 
 Als Beispiel für eine inhaltliche Übereinstimmung von Sendungen aus unterschiedlichen Programmen ist die Übereinstimmung 
@@ -41,5 +41,5 @@ Da durch die Beschreibung deutlich ist, dass in den beiden Sendungen um künstli
 
 Die Beschreibung der Empfehlungen lassen sich durch das Symbol `?` anzeigen.
 Nachdem Sie alle ähnliche Sendungen ausgewählt haben, könnten Sie die Umfrage erneut mit einer neuen Sendung durchführen, 
-indem Sie auf `Auswahl bestätigen und neue Sendung anzeigen` klicken, oder die Umfrage beenden. Dabei wird Ihrer Auswahl anonymisiert gespeichert.
+indem Sie auf `Auswahl bestätigen und neue Sendung anzeigen` klicken, oder die Umfrage beenden. Dabei wird Ihre Auswahl anonymisiert gespeichert.
 
