@@ -6,4 +6,5 @@ def show():
     :returns: TODO
 
     """
-    st.write('# Vielen Dank für Deine Zeit! \n Deine Auswahl wurde erfolgreich und anonym gespeichert und Du kannst nun die Seite schließen')
+    st.write(
+        '# Vielen Dank für Ihre Zeit! \n Ihre Auswahl wurde erfolgreich und anonym gespeichert und Du kannst nun die Seite schließen ![Alt Text](https: // media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)')
