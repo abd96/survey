@@ -138,7 +138,7 @@ def reload():
 
     """
     st.caching.clear_cache()
-    st.session_state.iscache = False
+    st.session_state.iscache = True
     st.session_state.current_selections = {}
 
     raise RerunException(st.script_request_queue.RerunData(None))
@@ -168,8 +168,6 @@ def show():
         st.session_state.random_index = random.choice(
             [x for x in choices if x not in st.session_state.ids])
         st.session_state.iscache = False
-    else:
-        random_index = st.session_state.random_index
 
     query_title, query_description, query_key, recs = loading_data(st.session_state.random_index)
 
