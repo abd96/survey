@@ -74,15 +74,12 @@ def cache_data():
 
 
 @st.cache(allow_output_mutation=True, show_spinner=False)
-def loading_data():
+def loading_data(random_index):
     all_methods = ['ARD', 'lucene', 'doc2vec_standard',
                    'bert_sw_cls_sum', 'tfidf', 'fasttext', 'lda_100_sym']
     method_recs, key_title = cache_data()
 
     #random_index = random.randint(0, len(method_recs['ARD']))
-    choices = list(range(0, len(method_recs['ARD'])))
-    random_index = random.choice(
-        [x for x in choices if x not in st.session_state.ids])
     st.session_state.ids.append(random_index)
     random_key = list(method_recs['ARD'].keys())[random_index]
 
@@ -161,7 +158,10 @@ def show():
 
     if st.session_state.outro:
         outro.show()
-    query_title, query_description, query_key, recs = loading_data()
+    choices = list(range(0, 300))
+    random_index = random.choice(
+        [x for x in choices if x not in st.session_state.ids])
+    query_title, query_description, query_key, recs = loading_data(random_index)
 
     if isinstance(query_description, float):
         query_description = 'Nicht Verfügbar'
