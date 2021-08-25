@@ -138,6 +138,7 @@ def reload():
 
     """
     st.caching.clear_cache()
+    st.session_state.iscache = False
     st.session_state.current_selections = {}
 
     raise RerunException(st.script_request_queue.RerunData(None))
@@ -155,13 +156,22 @@ def show():
         st.session_state.outro = False
     if 'ids' not in st.session_state:
         st.session_state.ids = []
+    if 'iscache' not in st.session_state:
+        st.session_state.iscache = True
+    if 'random_index' not in st.session_state:
+        st.session_state.random_index = -1
 
     if st.session_state.outro:
         outro.show()
-    choices = list(range(0, 300))
-    random_index = random.choice(
-        [x for x in choices if x not in st.session_state.ids])
-    query_title, query_description, query_key, recs = loading_data(random_index)
+    if st.session_state.iscache:
+        choices = list(range(0, 300))
+        st.session_state.random_index = random.choice(
+            [x for x in choices if x not in st.session_state.ids])
+        st.session_state.iscache = False
+    else:
+        random_index = st.session_state.random_index
+
+    query_title, query_description, query_key, recs = loading_data(st.session_state.random_index)
 
     if isinstance(query_description, float):
         query_description = 'Nicht Verfügbar'
