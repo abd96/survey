@@ -11,7 +11,7 @@ Die Arbeit erfolgt unter Betreuung von
 
 am [Lehrstuhl VIII](https://www-ai.cs.tu-dortmund.de/index.html) der Informatik Fakultät an der TU Dortmund.
 
-Der Ablauf ist sehr einfach. Pro Versuch wird das Titel und die Beschreibung einer Sendung aus der ARD Mediathek angezeigt und darunter 
+Der Ablauf der Umfrage ist sehr einfach. Es wird das Titel und die Beschreibung einer Sendung aus der ARD Mediathek angezeigt und darunter 
 wird eine Menge von Sendungen aufgelistet, die möglicherweise thematisch zu der angegebenen Sendung übereinstimmen. Mit einem Häkchen können Sendungen 
 ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlung dienen und zum Thema passen. Dabei muss die Auswahl nicht aus dem gleichen Programm der Sendung stammen 
 (z.B. bei Tagesschau, nur Tagesschau Sendungen zu wählen), sondern wir interessieren uns für inhaltlich passende Übereinstimmungen aus anderen Programmen.
