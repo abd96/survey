@@ -31,4 +31,5 @@ Zu wenig Personal und zu hoher Kostendruck in den Kliniken. 60 Wochenstunden sin
 ---
 
 Danke für die Teilnahme!
+
 -- Abdulhamed Chribati 
