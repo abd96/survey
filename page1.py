@@ -160,7 +160,7 @@ def show():
         st.session_state.iscache = True
     if 'random_index' not in st.session_state:
         st.session_state.random_index = -1
-
+    print(st.session_state.ids)
     if st.session_state.outro:
         outro.show()
     if st.session_state.iscache:
