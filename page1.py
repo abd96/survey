@@ -24,33 +24,35 @@ def connect_firebase():
     :returns: TODO
 
     """
-    firebase_config = {
-            'apiKey': st.secrets['apiKey'],
-            'authDomain': st.secrets['authDomain'],
-            'projectId': st.secrets['projectId'],
-            'storageBucket': st.secrets['storageBucket'],
-            'messagingSenderId': st.secrets['messagingSenderId'],
-            'appId': st.secrets['appId'],
-            'databaseURL': st.secrets['databaseURL']
+    # firebase_config = {
+    #        'apiKey': st.secrets['apiKey'],
+    #        'authDomain': st.secrets['authDomain'],
+    #        'projectId': st.secrets['projectId'],
+    #        'storageBucket': st.secrets['storageBucket'],
+    #        'messagingSenderId': st.secrets['messagingSenderId'],
+    #        'appId': st.secrets['appId'],
+    #        'databaseURL': st.secrets['databaseURL']
 
-            }
-    cred = credentials.Certificate({
-            'type': st.secrets['type'],
-            'project_id': st.secrets['project_id'],
-            'private_key_id': st.secrets['private_key_id'],
-            'private_key': st.secrets['private_key'],
-            'client_email': st.secrets['client_email'],
-            'client_id': st.secrets['client_id'],
-            'auth_uri': st.secrets['auth_uri'],
-            'token_uri': st.secrets['token_uri'],
-            'auth_provider_x509_cert_url': st.secrets['auth_provider_x509_cert_url'],
-            'client_x509_cert_url': st.secrets['client_x509_cert_url']
-            })
+    #        }
+    firebase_config = loadJSON('service_account.json')
+    cred = credentials.Certificate(firebase_config)
+    # cred = credentials.Certificate({
+    #        'type': st.secrets['type'],
+    #        'project_id': st.secrets['project_id'],
+    #        'private_key_id': st.secrets['private_key_id'],
+    #        'private_key': st.secrets['private_key'],
+    #        'client_email': st.secrets['client_email'],
+    #        'client_id': st.secrets['client_id'],
+    #        'auth_uri': st.secrets['auth_uri'],
+    #        'token_uri': st.secrets['token_uri'],
+    #        'auth_provider_x509_cert_url': st.secrets['auth_provider_x509_cert_url'],
+    #        'client_x509_cert_url': st.secrets['client_x509_cert_url']
+    #        })
 
     default_app = None
     if not firebase_admin._apps:
         default_app = firebase_admin.initialize_app(
-            cred, {'databaseURL': firebase_config['databaseURL']})
+            cred, {'databaseURL': "https://thesis-323716-default-rtdb.europe-west1.firebasedatabase.app"})
         st.session_state.firebase_app_exists = True
     else:
         default_app = firebase_admin.get_app()
@@ -114,6 +116,13 @@ def save_selections(k):
     except NotFound as _:
         ref.set(entry)
     st.session_state.current_selections = {}
+    _id = str(st.session_state.ids[-1])
+    ref = db.collection('ids').document(_id)
+    entry = {_id: []}
+    try:
+        ref.update(entry)
+    except NotFound as _:
+        ref.set(entry)
 
 
 def close():
@@ -160,17 +169,22 @@ def show():
         st.session_state.iscache = True
     if 'random_index' not in st.session_state:
         st.session_state.random_index = -1
-    print(st.session_state.ids)
     if st.session_state.outro:
         outro.show()
     if st.session_state.iscache:
+        db = connect_firebase()
+        ref = db.collection('ids')
+        ids = list({ el.id: el.to_dict() for el in ref.get() }.keys())
+
         choices = list(range(0, 300))
         st.session_state.random_index = random.choice(
-            [x for x in choices if x not in st.session_state.ids])
+            [x for x in choices if x not in ids])
         st.session_state.iscache = False
 
-    query_title, query_description, query_key, recs = loading_data(st.session_state.random_index)
 
+
+    query_title, query_description, query_key, recs = loading_data(
+        st.session_state.random_index)
     if isinstance(query_description, float):
         query_description = 'Nicht Verfügbar'
     if not st.session_state.end:
