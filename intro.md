@@ -11,14 +11,15 @@ für Künstliche Intelligenz der Informatik Fakultät an der TU Dortmund.
 ## Ablauf 
 Es wird der Titel und die Beschreibung einer Sendung aus der ARD Mediathek angezeigt und dafür 
 eine Menge von Sendungen aufgelistet, die möglicherweise thematisch zur Sendung passen. Mit einem Häkchen können Sendungen 
-ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlungen sind. Dabei muss die Auswahl nicht aus dem gleichen Programm der Sendung stammen 
+ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlungen dienen. Dabei muss die Auswahl nicht aus der gleichen Sendung stammen 
 (z.B. bei Tagesschau, nur Tagesschau Sendungen zu wählen), sondern wir interessieren uns für inhaltlich passende Übereinstimmungen aus anderen Programmen.
 
 Die Beschreibung einer Sendung lässt sich durch das Symbol `?` anzeigen.
-Nachdem Sie alle ähnliche Sendungen ausgewählt haben, könnten Sie die Umfrage erneut mit einer neuen Sendung durchführen, 
+Nachdem Sie alle ähnlichen Sendungen ausgewählt haben, können Sie die Umfrage erneut mit einer neuen Sendung durchführen, 
 indem Sie auf `Auswahl bestätigen und neue Sendung anzeigen` klicken, oder die Umfrage beenden. Dabei wird Ihre Auswahl anonymisiert gespeichert.
 
-## Beispiel
+## Beispiel zweier Sendungen mit thematischer Übereinstimmung 
+
 
 ---
 
@@ -30,4 +31,5 @@ Zu wenig Personal und zu hoher Kostendruck in den Kliniken. 60 Wochenstunden sin
 ---
 
 
+Abdulhamed Chribati 
 
