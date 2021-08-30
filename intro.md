@@ -14,6 +14,10 @@ eine Menge von Sendungen aufgelistet, die möglicherweise thematisch zur Sendung
 ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlungen sind. Dabei muss die Auswahl nicht aus dem gleichen Programm der Sendung stammen 
 (z.B. bei Tagesschau, nur Tagesschau Sendungen zu wählen), sondern wir interessieren uns für inhaltlich passende Übereinstimmungen aus anderen Programmen.
 
+Die Beschreibung einer Sendung lässt sich durch das Symbol `?` anzeigen.
+Nachdem Sie alle ähnliche Sendungen ausgewählt haben, könnten Sie die Umfrage erneut mit einer neuen Sendung durchführen, 
+indem Sie auf `Auswahl bestätigen und neue Sendung anzeigen` klicken, oder die Umfrage beenden. Dabei wird Ihre Auswahl anonymisiert gespeichert.
+
 ## Beispiel
 
 ---
@@ -26,7 +30,4 @@ Zu wenig Personal und zu hoher Kostendruck in den Kliniken. 60 Wochenstunden sin
 ---
 
 
-Die Beschreibung der Empfehlungen lassen sich durch das Symbol `?` anzeigen.
-Nachdem Sie alle ähnliche Sendungen ausgewählt haben, könnten Sie die Umfrage erneut mit einer neuen Sendung durchführen, 
-indem Sie auf `Auswahl bestätigen und neue Sendung anzeigen` klicken, oder die Umfrage beenden. Dabei wird Ihre Auswahl anonymisiert gespeichert.
 
