@@ -12,7 +12,7 @@ für Künstliche Intelligenz der Informatik Fakultät an der TU Dortmund.
 Es wird der Titel und die Beschreibung einer Sendung aus der ARD Mediathek angezeigt und dafür 
 eine Menge von Sendungen aufgelistet, die möglicherweise thematisch zur Sendung passen. Mit einem Häkchen können Sendungen 
 ausgewählt werden, die Ihrer Meinung nach als gute **inhaltsbasierte** Empfehlungen dienen. Dabei muss die Auswahl nicht aus der gleichen Sendung stammen 
-(z.B. bei Tagesschau, nur Tagesschau Sendungen zu wählen), sondern wir interessieren uns für inhaltlich passende Übereinstimmungen aus anderen Programmen.
+(z.B. bei Tagesschau, nur Tagesschau zu wählen), sondern wir interessieren uns für inhaltlich passende Übereinstimmungen aus anderen Programmen.
 
 Die Beschreibung einer Sendung lässt sich durch das Symbol `?` anzeigen.
 Nachdem Sie alle ähnlichen Sendungen ausgewählt haben, können Sie die Umfrage erneut mit einer neuen Sendung durchführen, 
@@ -32,4 +32,4 @@ Zu wenig Personal und zu hoher Kostendruck in den Kliniken. 60 Wochenstunden sin
 
 Danke für die Teilnahme!
 
--- Abdulhamed Chribati 
+-- Abdul-Hamed Chribati 
